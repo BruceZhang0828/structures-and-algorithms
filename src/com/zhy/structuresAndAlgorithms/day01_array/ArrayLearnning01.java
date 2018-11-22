@@ -1,4 +1,4 @@
-package com.zhy.structuresAndAlgorithms.array;
+package com.zhy.structuresAndAlgorithms.day01_array;
 
 public class ArrayLearnning01 {
     public static void main(String[] args) {

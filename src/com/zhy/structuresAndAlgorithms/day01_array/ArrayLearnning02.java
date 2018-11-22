@@ -1,4 +1,4 @@
-package com.zhy.structuresAndAlgorithms.array;
+package com.zhy.structuresAndAlgorithms.day01_array;
 
 public class ArrayLearnning02 {
     //定义一个数组 进行保存数据
@@ -88,7 +88,7 @@ public class ArrayLearnning02 {
         array.insert(1, 5);
         array.insert(3, 9);
         array.insert(3, 10);
-        //array.insert(3, 11);
+        //day01_array.insert(3, 11);
         array.printAll();
     }
 }
