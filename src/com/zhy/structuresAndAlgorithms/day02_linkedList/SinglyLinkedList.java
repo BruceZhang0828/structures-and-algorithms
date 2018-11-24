@@ -144,6 +144,7 @@ public class SinglyLinkedList {
 
 
     //判断 true or false
+    //传入两个节点 判断节点以及 之后的数据 是否相等.
     public boolean TFResult(Node left,Node right){
         Node l = left;
         Node r = right;
@@ -194,6 +195,7 @@ public class SinglyLinkedList {
             System.out.println("开始执行奇数节点的回文判断");
             Node leftLink = null;
             Node rightLink = null;
+
             if (q.next ==null){
                 //p 一定为整个链表中的中点,且节点数目为奇数
                 rightLink = p.next;
@@ -203,6 +205,7 @@ public class SinglyLinkedList {
             }else{
                 //p q均为中点
                 rightLink = p.next;
+                //只是翻转 左半边的链表
                 leftLink = inverseLinkList(p);
 
             }
@@ -277,6 +280,32 @@ public class SinglyLinkedList {
 
         public int getData(){
             return this.data;
+        }
+    }
+
+    public static void main(String[] args) {
+        SinglyLinkedList link = new SinglyLinkedList();
+        System.out.println("hello");
+        //int data[] = {1};
+        //int data[] = {1,2};
+        int data[] = {1,2,3,1};
+        //int data[] = {1,2,5};
+        //int data[] = {1,2,2,1};
+        // int data[] = {1,2,5,2,1};
+
+        //int data[] = {1,2,5,2,1};
+
+        for(int i =0; i < data.length; i++){
+            //link.insertToHead(data[i]);
+            link.insertTail(data[i]);
+        }
+
+        System.out.println("打印原始:");
+        link.printAll();
+        if (link.palindrome()){
+            System.out.println("回文");
+        }else{
+            System.out.println("不是回文");
         }
     }
 }
